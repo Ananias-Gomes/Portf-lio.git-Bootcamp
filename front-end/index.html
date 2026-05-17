@@ -3,87 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ananias Gomes | Portfólio Profissional</title>
-    
+    <title>Ananias Gomes | Portfólio</title>
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <div class="container">
-        
-        <section id="hero" class="center-text">
-            
+    <div class="page-layout">
+        <aside class="sidebar">
             <div class="profile-wrapper">
                 <div class="fluid-shape"></div>
-                <img src="minha-foto.jpg.PNG" alt="Ananias Gomes in a dark suit and tie standing with hands in his pockets against a white background, conveying a confident and professional presence" class="profile-img">
+                <img src="minha-foto.jpg.PNG" alt="Ananias Gomes" class="profile-img">
+            </div>
+            <h1>Ananias<br>Gomes</h1>
+            <p class="role">Engenharia de Software & IA</p>
+
+            <div class="contact-info">
+                <p><i class="fa-solid fa-location-dot"></i> Brasília, DF - Brasil</p>
+                <p><i class="fa-solid fa-envelope"></i> filhoananias@gmail.com</p>
             </div>
 
-            <h1>Ananias Gomes de Souza</h1>
-            <p class="subtitle">Engenharia de Software | Inteligência Artificial | Alto Rendimento</p>
-            <p class="bio-text">Uno a disciplina e resiliência de um atleta de alto rendimento à lógica da Engenharia de Software. Com vivência internacional e foco em impacto social, busco construir sistemas escaláveis e soluções em IA que transformem a sociedade.</p>
-        </section>
-
-        <section id="mindset">
-            <h2><i class="fa-solid fa-brain"></i> Mindset & Conduta</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3><i class="fa-solid fa-leaf"></i> Filosofia de Vida</h3>
-                    <p>Minimalismo na ação, profundidade no pensamento. Aprendi no tatame do Karatê que a melhoria contínua e a ética irretocável são fundamentais em cada linha de código que escrevo.</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-rocket"></i> Objetivos Profissionais</h3>
-                    <p>Dominar arquiteturas escaláveis, aprimorar inteligência artificial (Python/IA) e impactar positivamente a sociedade através de produtos digitais eficientes e resilientes sob pressão.</p>
-                </div>
+            <div class="social-links">
+                <a href="https://github.com/Ananias-Gomes" target="_blank" title="Acessar GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ananias-gomes-de-souza-5a74023b7/" target="_blank" title="Acessar LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-        </section>
+        </aside>
 
-        <section id="skills">
-            <h2><i class="fa-solid fa-microchip"></i> Skills, Tecnologias & Fundamentos</h2>
-            <div class="tags">
-                <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
-                <span class="tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-                <span class="tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-                <span class="tag"><i class="fa-solid fa-c"></i> C</span>
-                <span class="tag"><b>C#</b></span>
-                
-                <span class="tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
-                <span class="tag"><i class="fa-solid fa-code"></i> Visual Studio</span>
-                <span class="tag"><i class="fa-brands fa-unity"></i> Unity</span>
-                
-                <span class="tag"><i class="fa-solid fa-database"></i> Bancos de Dados (MER, Físico & SQL)</span>
-                <span class="tag"><i class="fa-solid fa-laptop-code"></i> Lógica de Programação</span>
-                <span class="tag"><i class="fa-solid fa-sitemap"></i> Engenharia de Requisitos</span>
-                <span class="tag"><i class="fa-solid fa-network-wired"></i> Engenharia de Software</span>
-                <span class="tag"><i class="fa-solid fa-desktop"></i> Introdução à Computação</span>
-            </div>
-        </section>
+        <main class="content">
+            <section id="about" class="fade-in">
+                <h2>Resumo Profissional</h2>
+                <p>Uno a disciplina e resiliência de um atleta de alto rendimento (Karatê) à lógica da Engenharia de Software. Com vivência internacional e foco em impacto social, busco construir sistemas escaláveis e soluções em Inteligência Artificial que transformem a sociedade. Minimalismo na ação, profundidade no pensamento.</p>
+            </section>
 
-        <section id="achievements">
-            <h2><i class="fa-solid fa-folder-open"></i> Projetos em Andamento</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3><i class="fa-solid fa-chess-board"></i> Jogo de Shogi (Xadrez Japonês)</h3>
-                    <p>Desenvolvido na plataforma <b>Unity</b> utilizando a linguagem <b>C#</b>. O projeto aplica fortemente o uso de Vetores e conceitos robustos de Programação Orientada a Objetos (POO).</p>
+            <section id="projects" class="fade-in">
+                <h2>Projetos em Andamento (Clique para Detalhes)</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <details>
+                            <summary>
+                                <h3><i class="fa-solid fa-chess-board"></i> Jogo de Shogi (Xadrez Japonês) <span class="click-hint">[Ver mais]</span></h3>
+                                <p class="tech-stack"><i class="fa-brands fa-unity"></i> Unity | <i class="fa-solid fa-code"></i> C#</p>
+                            </summary>
+                            <div class="details-content">
+                                <p>Desenvolvimento de um motor completo para o jogo tradicional japonês Shogi adaptado para o ambiente interativo da <b>Unity</b>.</p>
+                                <ul>
+                                    <li><strong>Paradigma:</strong> Programação Orientada a Objetos (POO) robusta para gerenciar o tabuleiro e o comportamento das peças.</li>
+                                    <li><strong>Estrutura:</strong> Manipulação avançada de vetores bidimensionais para cálculo de jogadas válidas.</li>
+                                    <li><strong>Contexto Acadêmico:</strong> Aplicação prática de conceitos de Lógica de Programação e Estruturas de Dados.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="timeline-item">
+                        <details>
+                            <summary>
+                                <h3><i class="fa-solid fa-mobile-screen"></i> App Alter <span class="click-hint">[Ver mais]</span></h3>
+                                <p class="tech-stack"><i class="fa-solid fa-gears"></i> Gestão de Rotinas & Performance</p>
+                            </summary>
+                            <div class="details-content">
+                                <p>Aplicativo focado em desenvolvimento pessoal, rastreamento de hábitos e otimização de rotinas sob a metodologia de alto rendimento.</p>
+                                <ul>
+                                    <li><strong>Mindset:</strong> Baseado nos ciclos de feedback de resiliência extraídos do esporte de performance (Karatê).</li>
+                                    <li><strong>Engenharia:</strong> Mapeamento de requisitos de usuário focado em usabilidade e UX minimalista.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="timeline-item">
+                        <details>
+                            <summary>
+                                <h3><i class="fa-solid fa-globe"></i> Portfólio & Repositório Profissional <span class="click-hint">[Ver mais]</span></h3>
+                                <p class="tech-stack"><i class="fa-brands fa-html5"></i> HTML5 | <i class="fa-brands fa-css3-alt"></i> CSS3 | <i class="fa-brands fa-git-alt"></i> Git</p>
+                            </summary>
+                            <div class="details-content">
+                                <p>Construção deste ecossistema digital integrado contendo a documentação metodológica do meu perfil estudantil e técnico.</p>
+                                <ul>
+                                    <li><strong>Versionamento:</strong> Controle fino de histórico de alterações via Git e repositório estruturado no GitHub.</li>
+                                    <li><strong>Hospedagem:</strong> Implantação de pipeline contínuo utilizando o GitHub Pages.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-mobile-screen-button"></i> App Alter</h3>
-                    <p>Um aplicativo focado em melhoria pessoal e gerenciamento de rotinas. Alinhado com a metodologia de alto rendimento, resiliência e adaptação contínua.</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-globe"></i> Portfólio & Versionamento</h3>
-                    <p>Este site! Construído do zero (HTML/CSS) com versionamento semântico via Git, demonstrando organização de repositório e deploy CI/CD através do GitHub Pages.</p>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>Desenvolvido por Ananias Gomes para o Desafio de Versionamento Git + GitHub.</p>
-            <p>© 2026 | Arquitetando o futuro através do código.</p>
-        </footer>
-
+            </section>
+        </main>
     </div>
-
 </body>
 </html>

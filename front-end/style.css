@@ -4,6 +4,7 @@
 :root {
     --bg-dark: #050505;
     --bg-light: #111111;
+    --bg-panel: #181818;
     --text-white: #ffffff;
     --text-gray: #888888;
     --border-color: #222222;
@@ -26,6 +27,82 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #090909 0%, #121212 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.content {
+    padding-bottom: 20px;
+}
+
+.role {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--text-gray);
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    color: var(--text-gray);
+    font-size: 1.35rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.timeline-item {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #0f0f0f;
+}
+
+.tech-stack {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #777777;
 }
 
 /* =========================================
@@ -220,4 +297,70 @@ footer {
     font-size: 0.85rem;
     color: #444;
     letter-spacing: 1px;
+}
+/* =========================================
+   ESTILOS DOS PROJETOS EXPANSÍVEIS (DETAILS/SUMMARY)
+   ========================================= */
+details {
+    width: 100%;
+    outline: none;
+}
+
+summary {
+    list-style: none; /* Esconde a setinha nativa feia do navegador */
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Esconde a setinha no Safari */
+}
+
+/* Pequena dica visual ao lado do título */
+.click-hint {
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 300;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+summary:hover .click-hint {
+    color: var(--text-white);
+}
+
+/* O bloco de conteúdo que aparece na tela ao clicar */
+.details-content {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    animation: slideDown 0.4s ease-out forwards;
+}
+
+.details-content p {
+    color: #cccccc;
+    margin-bottom: 12px;
+}
+
+.details-content ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.details-content li {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Animação suave para revelar o texto na tela */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
