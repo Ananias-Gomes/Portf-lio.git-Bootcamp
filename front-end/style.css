@@ -1,0 +1,223 @@
+/* =========================================
+   VARIÁVEIS DE CORES (Minimalismo Dark/Futurista)
+   ========================================= */
+:root {
+    --bg-dark: #050505;
+    --bg-light: #111111;
+    --text-white: #ffffff;
+    --text-gray: #888888;
+    --border-color: #222222;
+    --glow-effect: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   RESET E TIPOGRAFIA GERAL
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-gray);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   TÍTULOS E TEXTOS
+   ========================================= */
+h1, h2, h3 {
+    color: var(--text-white);
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px var(--glow-effect);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: #aaaaaa;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+h3 i {
+    margin-right: 8px;
+}
+
+.center-text { text-align: center; margin-top: 60px; }
+.subtitle { font-size: 1.2rem; color: var(--text-white); margin-bottom: 25px; letter-spacing: 1px; }
+.bio-text { max-width: 800px; margin: 0 auto; font-size: 1.05rem; }
+
+/* =========================================
+   ESTRUTURA DO SITE E ANIMAÇÕES
+   ========================================= */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+section {
+    margin-bottom: 100px;
+    animation: fadeInUp 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+#mindset { animation-delay: 0.3s; }
+#skills { animation-delay: 0.6s; }
+#achievements { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   ESTILOS DA IMAGEM E FLUIDO FUTURISTA
+   ========================================= */
+.profile-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fluid-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    box-shadow: 0 0 30px var(--glow-effect);
+    animation: morph 10s ease-in-out infinite;
+    z-index: 1;
+}
+
+.profile-img {
+    position: relative;
+    z-index: 2;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    transition: all 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: var(--text-white);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+/* =========================================
+   CARDS (PROJETOS E CONDUTA)
+   ========================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.9);
+    border-color: #444444;
+}
+
+.card:hover::before { opacity: 1; }
+
+/* =========================================
+   TAGS (SKILLS E MATÉRIAS)
+   ========================================= */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    border: 1px solid var(--border-color);
+    color: var(--text-gray);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag:hover {
+    background-color: var(--text-white);
+    color: var(--bg-dark);
+    border-color: var(--text-white);
+    box-shadow: 0 0 15px var(--glow-effect);
+    transform: scale(1.05);
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: #444;
+    letter-spacing: 1px;
+}
